@@ -1,0 +1,24 @@
+{
+  "courses": [
+    {
+      "id": "python-basics",
+      "title": "Python Basics",
+      "description": "Learn Python from scratch with hands-on examples. Master variables, data types, control flow, functions, and more.",
+      "thumbnail": "https://picsum.photos/seed/python/800/400",
+      "duration": "3 hours",
+      "level": "Beginner",
+      "totalLessons": 8,
+      "totalChapters": 3
+    },
+    {
+      "id": "networking-fundamentals",
+      "title": "Networking Fundamentals",
+      "description": "Understand how computer networks work — from IP addresses to protocols, routing, and network security basics.",
+      "thumbnail": "https://picsum.photos/seed/networking/800/400",
+      "duration": "4 hours",
+      "level": "Beginner",
+      "totalLessons": 7,
+      "totalChapters": 3
+    }
+  ]
+}

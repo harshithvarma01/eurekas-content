@@ -1,0 +1,150 @@
+{
+  "id": "networking-fundamentals",
+  "title": "Networking Fundamentals",
+  "description": "Understand how computer networks work — from IP addresses to protocols, routing, and network security basics.",
+  "thumbnail": "https://picsum.photos/seed/networking/800/400",
+  "duration": "4 hours",
+  "level": "Beginner",
+  "chapters": [
+    {
+      "id": "net-ch1",
+      "title": "Introduction to Networking",
+      "lessons": [
+        {
+          "id": "net-l1",
+          "type": "text",
+          "title": "What is a Computer Network?",
+          "content": "A computer network is a collection of interconnected devices that can communicate and share resources with each other. Networks enable everything from sending emails to streaming videos to browsing the web.\n\n## Types of Networks\n\n### By Size\n\n**PAN (Personal Area Network)**\nSmallest type of network, typically within a few meters. Examples: Bluetooth connection between your phone and headphones, USB connections.\n\n**LAN (Local Area Network)**\nCovers a small area like a home, office, or school building. This is the most common type of network you interact with daily — your home Wi-Fi is a LAN.\n\n**MAN (Metropolitan Area Network)**\nSpans a city or large campus. Often used by organizations with multiple buildings in the same city.\n\n**WAN (Wide Area Network)**\nCovers large geographical areas, spanning cities, countries, or even continents. The internet itself is the largest WAN in existence.\n\n## Network Components\n\n### Essential Hardware\n\n| Device | Function |\n|--------|----------|\n| **Router** | Connects different networks and directs traffic between them |\n| **Switch** | Connects devices within a single network |\n| **Access Point** | Provides wireless connectivity |\n| **Modem** | Converts signals between your ISP and your network |\n| **NIC** | Network Interface Card — allows a device to connect to a network |\n\n### Network Media\n\n1. **Ethernet cables** (Cat5e, Cat6, Cat6a) — wired connections, most reliable\n2. **Fiber optic** — uses light pulses, fastest speeds, longest distances\n3. **Wireless (Wi-Fi)** — radio waves, most convenient, variable speeds\n\n## How Data Travels\n\nWhen you send a message over a network, it doesn't travel as one big block. Instead, it's broken into small **packets**:\n\n1. Your data is divided into packets\n2. Each packet gets a header with destination address\n3. Packets travel independently (possibly different routes)\n4. Packets are reassembled at the destination\n\nThis is called **packet switching** and it's the fundamental principle behind the internet.\n\n## Key Takeaways\n\n- Networks range from PAN (personal) to WAN (worldwide)\n- Key devices: routers, switches, access points, modems\n- Data travels as packets, not continuous streams\n- The internet is the world's largest network",
+          "minReadSeconds": 50
+        },
+        {
+          "id": "net-l2",
+          "type": "video",
+          "title": "How the Internet Works",
+          "videoUrl": "https://www.youtube.com/watch?v=x3c1ih2NJEg",
+          "minWatchPercent": 90
+        },
+        {
+          "id": "net-l3",
+          "type": "mcq",
+          "title": "Quick Check: Network Basics",
+          "question": "Which type of network typically covers a single building or home?",
+          "options": [
+            "WAN (Wide Area Network)",
+            "MAN (Metropolitan Area Network)",
+            "LAN (Local Area Network)",
+            "PAN (Personal Area Network)"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "net-ch2",
+      "title": "IP Addresses and Protocols",
+      "lessons": [
+        {
+          "id": "net-l4",
+          "type": "text",
+          "title": "Understanding IP Addresses",
+          "content": "An IP (Internet Protocol) address is a unique numerical label assigned to every device connected to a network. It serves two main purposes: **identification** and **location addressing**.\n\n## IPv4 Addresses\n\nIPv4 is the most widely used version. An IPv4 address looks like this:\n\n```\n192.168.1.1\n```\n\nIt consists of four numbers (called **octets**) separated by dots. Each octet ranges from 0 to 255.\n\n### Total addresses: 2³² = ~4.3 billion\n\nThis seemed like plenty in the 1980s, but with billions of devices today, we've run out!\n\n## IPv6 Addresses\n\nIPv6 was created to solve the address shortage. An IPv6 address looks like:\n\n```\n2001:0db8:85a3:0000:0000:8a2e:0370:7334\n```\n\n### Total addresses: 2¹²⁸ = 340 undecillion\n\nThat's enough for every grain of sand on Earth to have its own address!\n\n## Public vs. Private IP Addresses\n\n**Public IP** — Your address on the internet, assigned by your ISP. Unique globally.\n\n**Private IP** — Your address within your local network. Common ranges:\n\n| Range | Class | Typical Use |\n|-------|-------|-------------|\n| 10.0.0.0 – 10.255.255.255 | Class A | Large organizations |\n| 172.16.0.0 – 172.31.255.255 | Class B | Medium organizations |\n| 192.168.0.0 – 192.168.255.255 | Class C | Home networks |\n\n## How NAT Works\n\nNAT (Network Address Translation) allows multiple devices with private IPs to share a single public IP. Your router performs NAT:\n\n1. Device (192.168.1.5) sends a request to google.com\n2. Router replaces the private IP with its public IP (e.g., 74.125.24.100)\n3. Google responds to the public IP\n4. Router translates back and forwards to the correct device\n\n## DNS — The Internet's Phone Book\n\nDNS (Domain Name System) translates human-readable names to IP addresses:\n\n```\ngoogle.com → 142.250.190.78\n```\n\nWithout DNS, you'd need to memorize IP addresses for every website!\n\n## Key Takeaways\n\n- IPv4: 4 octets (xxx.xxx.xxx.xxx), ~4.3 billion addresses\n- IPv6: 128-bit addresses, virtually unlimited\n- Private IPs are used within LANs; public IPs on the internet\n- NAT allows multiple devices to share one public IP\n- DNS translates domain names to IP addresses",
+          "minReadSeconds": 55
+        },
+        {
+          "id": "net-l5",
+          "type": "mcq",
+          "title": "Quick Check: IP Addresses",
+          "question": "Which IP address range is typically used for home networks?",
+          "options": [
+            "10.0.0.0 – 10.255.255.255",
+            "172.16.0.0 – 172.31.255.255",
+            "192.168.0.0 – 192.168.255.255",
+            "224.0.0.0 – 239.255.255.255"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "net-ch3",
+      "title": "Network Security Basics",
+      "lessons": [
+        {
+          "id": "net-l6",
+          "type": "text",
+          "title": "Firewalls, Encryption, and Common Threats",
+          "content": "Network security is the practice of protecting network infrastructure and data from unauthorized access, misuse, or theft. In today's connected world, understanding security basics is essential.\n\n## Common Network Threats\n\n### 1. Malware\nMalicious software designed to damage or exploit systems:\n- **Viruses** — attach to programs and spread when executed\n- **Worms** — self-replicate across networks without user action\n- **Trojans** — disguise as legitimate software\n- **Ransomware** — encrypts your files and demands payment\n\n### 2. Phishing\nFake emails or websites designed to trick you into revealing sensitive information (passwords, credit card numbers).\n\n### 3. Man-in-the-Middle (MITM)\nAn attacker secretly intercepts communication between two parties, potentially reading or modifying data.\n\n### 4. DDoS (Distributed Denial of Service)\nOverwhelming a server with traffic from many sources, making it unavailable to legitimate users.\n\n### 5. Password Attacks\n- **Brute force** — trying every possible combination\n- **Dictionary attack** — trying common passwords\n- **Credential stuffing** — using leaked password databases\n\n## Firewalls\n\nA firewall monitors and controls incoming and outgoing network traffic based on security rules.\n\n**Types:**\n- **Packet filtering** — examines individual packets (basic)\n- **Stateful inspection** — tracks connection states (better)\n- **Application layer** — inspects content at the application level (best)\n\n## Encryption\n\nEncryption converts readable data (plaintext) into unreadable data (ciphertext) using mathematical algorithms.\n\n**Symmetric encryption** — Same key for encryption and decryption (AES)\n**Asymmetric encryption** — Public key encrypts, private key decrypts (RSA)\n\n### HTTPS\nHTTPS (HTTP Secure) uses TLS/SSL to encrypt web traffic:\n- Look for the 🔒 lock icon in your browser\n- All data between your browser and the website is encrypted\n- Prevents eavesdropping and tampering\n\n## Best Practices\n\n1. **Use strong, unique passwords** (12+ characters, mix of types)\n2. **Enable two-factor authentication** (2FA) wherever possible\n3. **Keep software updated** — patches fix security vulnerabilities\n4. **Use a VPN** on public Wi-Fi networks\n5. **Don't click suspicious links** — verify sender identity\n6. **Back up important data** regularly\n\n## Key Takeaways\n\n- Major threats: malware, phishing, MITM, DDoS, password attacks\n- Firewalls filter network traffic based on rules\n- Encryption protects data in transit and at rest\n- HTTPS is essential for secure web browsing\n- Strong passwords + 2FA are your first line of defense",
+          "minReadSeconds": 60
+        },
+        {
+          "id": "net-l7",
+          "type": "mcq",
+          "title": "Quick Check: Network Security",
+          "question": "What does HTTPS use to secure web traffic?",
+          "options": [
+            "SSH tunneling",
+            "TLS/SSL encryption",
+            "Packet filtering",
+            "MAC address filtering"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ],
+  "exam": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "question": "What is the main function of a router?",
+        "options": [
+          "Connect devices within a single network",
+          "Connect different networks and direct traffic between them",
+          "Provide wireless connectivity",
+          "Convert digital signals to analog"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "How many total IPv4 addresses are possible?",
+        "options": [
+          "About 16 million",
+          "About 256 million",
+          "About 4.3 billion",
+          "About 340 undecillion"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "What does DNS stand for?",
+        "options": [
+          "Dynamic Network Service",
+          "Domain Name System",
+          "Data Network Security",
+          "Digital Naming Standard"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which type of malware encrypts your files and demands payment?",
+        "options": [
+          "Virus",
+          "Worm",
+          "Trojan",
+          "Ransomware"
+        ],
+        "correctIndex": 3
+      },
+      {
+        "question": "What is NAT used for?",
+        "options": [
+          "Encrypting network traffic",
+          "Filtering malicious packets",
+          "Allowing multiple devices to share a single public IP",
+          "Converting domain names to IP addresses"
+        ],
+        "correctIndex": 2
+      }
+    ]
+  }
+}

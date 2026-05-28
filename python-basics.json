@@ -1,0 +1,131 @@
+{
+  "id": "python-basics",
+  "title": "Python Basics",
+  "description": "Learn Python from scratch with hands-on examples. Master variables, data types, control flow, functions, and more.",
+  "thumbnail": "https://picsum.photos/seed/python/800/400",
+  "duration": "3 hours",
+  "level": "Beginner",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Getting Started with Python",
+      "lessons": [
+        {
+          "id": "py-l1",
+          "type": "text",
+          "title": "What is Python?",
+          "content": "Python is a high-level, interpreted programming language created by Guido van Rossum and first released in 1991. It emphasizes code readability with its use of significant indentation.\n\nPython is one of the most popular programming languages in the world, used by companies like Google, Netflix, Instagram, and Spotify.\n\n## Why Learn Python?\n\n**1. Easy to Learn**\nPython's syntax is clean and readable, making it an excellent first programming language. Unlike other languages that use curly braces or semicolons, Python uses indentation to define code blocks.\n\n**2. Versatile**\nPython can be used for:\n- Web development (Django, Flask)\n- Data science and machine learning (NumPy, pandas, scikit-learn)\n- Automation and scripting\n- Game development (Pygame)\n- Desktop applications\n- IoT and embedded systems\n\n**3. Large Community**\nWith millions of developers worldwide, Python has one of the largest and most active communities. This means:\n- Thousands of free libraries and packages\n- Extensive documentation\n- Countless tutorials and resources\n- Active forums and Q&A sites\n\n**4. High Demand**\nPython developers are among the highest-paid programmers globally, with strong demand across industries.\n\n## Python Versions\n\nPython 3 is the current and actively developed version. Python 2 reached end-of-life in January 2020 and should no longer be used for new projects.\n\n## Your First Python Code\n\nThe simplest Python program is just one line:\n\n```python\nprint(\"Hello, World!\")\n```\n\nThis outputs: `Hello, World!`\n\nThat's it — no boilerplate, no class declarations, no main functions. Just write what you want to do.\n\n## Key Takeaways\n\n- Python is beginner-friendly yet powerful enough for production use\n- It's used across many domains: web, data, AI, automation\n- Python 3 is the version you should learn\n- The community and ecosystem are massive and supportive",
+          "minReadSeconds": 45
+        },
+        {
+          "id": "py-l2",
+          "type": "video",
+          "title": "Installing Python on Your Computer",
+          "videoUrl": "https://youtu.be/MrbpCWR_65w?si=tBSYCNOS5U0O98hq",
+          "minWatchPercent": 90
+        },
+        {
+          "id": "py-l3",
+          "type": "mcq",
+          "title": "Knowledge Check: Verification",
+          "question": "Did the YouTube video load successfully and is the UI working as expected?",
+          "options": [
+            "No, it looks broken",
+            "Yes! The video works and the UI looks great",
+            "I am not sure"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Variables and Data Types",
+      "lessons": [
+        {
+          "id": "py-l4",
+          "type": "text",
+          "title": "Variables in Python",
+          "content": "A variable is a name that refers to a value stored in memory. In Python, you don't need to declare the type of a variable — Python figures it out automatically.\n\n## Creating Variables\n\nTo create a variable, simply assign a value to a name using the `=` operator:\n\n```python\nname = \"Alice\"\nage = 25\nheight = 5.6\nis_student = True\n```\n\n## Naming Rules\n\nVariable names in Python must follow these rules:\n\n1. **Start with a letter or underscore** — not a number\n2. **Contain only letters, numbers, and underscores** — no spaces or special characters\n3. **Case-sensitive** — `name`, `Name`, and `NAME` are different variables\n4. **Cannot be a Python keyword** — words like `if`, `for`, `while`, `class` are reserved\n\n### Good Variable Names\n```python\nuser_name = \"Bob\"\ntotal_score = 95\n_private_var = \"hidden\"\nfirstName = \"Charlie\"  # camelCase (less common in Python)\n```\n\n### Bad Variable Names\n```python\n2nd_place = \"error\"    # starts with number\nmy-var = \"error\"       # contains hyphen\nclass = \"error\"        # reserved keyword\n```\n\n## Data Types\n\nPython has several built-in data types:\n\n| Type | Example | Description |\n|------|---------|-------------|\n| `int` | `42` | Whole numbers |\n| `float` | `3.14` | Decimal numbers |\n| `str` | `\"hello\"` | Text strings |\n| `bool` | `True` | Boolean (True/False) |\n| `list` | `[1, 2, 3]` | Ordered, mutable collection |\n| `tuple` | `(1, 2, 3)` | Ordered, immutable collection |\n| `dict` | `{\"a\": 1}` | Key-value pairs |\n| `None` | `None` | Represents no value |\n\n## Checking Types\n\nUse the `type()` function to check a variable's type:\n\n```python\nx = 42\nprint(type(x))  # <class 'int'>\n\ny = \"hello\"\nprint(type(y))  # <class 'str'>\n```\n\n## Type Conversion\n\nYou can convert between types:\n\n```python\n# String to integer\nage_str = \"25\"\nage_int = int(age_str)  # 25\n\n# Integer to string\nnum = 42\nnum_str = str(num)  # \"42\"\n\n# Integer to float\nwhole = 5\ndecimal = float(whole)  # 5.0\n```\n\n## Key Takeaways\n\n- Variables are created with `=` and don't need type declarations\n- Follow naming conventions: lowercase with underscores (snake_case)\n- Python has rich built-in types: int, float, str, bool, list, dict, etc.\n- Use `type()` to check and `int()`, `str()`, `float()` to convert types",
+          "minReadSeconds": 60
+        },
+        {
+          "id": "py-l5",
+          "type": "mcq",
+          "title": "Quick Check: Variables",
+          "question": "What will `type(3.14)` return in Python?",
+          "options": [
+            "<class 'int'>",
+            "<class 'float'>",
+            "<class 'str'>",
+            "<class 'decimal'>"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Control Flow",
+      "lessons": [
+        {
+          "id": "py-l6",
+          "type": "text",
+          "title": "If Statements and Loops",
+          "content": "Control flow statements let you control the order in which your code runs. The two main types are **conditional statements** (if/elif/else) and **loops** (for/while).\n\n## If Statements\n\nAn `if` statement runs code only when a condition is true:\n\n```python\nage = 18\n\nif age >= 18:\n    print(\"You can vote!\")\nelse:\n    print(\"Too young to vote.\")\n```\n\n### elif (else if)\n\nUse `elif` to check multiple conditions:\n\n```python\nscore = 85\n\nif score >= 90:\n    grade = \"A\"\nelif score >= 80:\n    grade = \"B\"\nelif score >= 70:\n    grade = \"C\"\nelse:\n    grade = \"F\"\n\nprint(f\"Your grade: {grade}\")  # Output: Your grade: B\n```\n\n## Comparison Operators\n\n| Operator | Meaning | Example |\n|----------|---------|---------|\n| `==` | Equal to | `x == 5` |\n| `!=` | Not equal to | `x != 5` |\n| `>` | Greater than | `x > 5` |\n| `<` | Less than | `x < 5` |\n| `>=` | Greater or equal | `x >= 5` |\n| `<=` | Less or equal | `x <= 5` |\n\n## For Loops\n\nA `for` loop iterates over a sequence:\n\n```python\n# Loop through a list\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(fruit)\n\n# Loop with range\nfor i in range(5):\n    print(i)  # Prints 0, 1, 2, 3, 4\n\n# Loop with range (start, stop, step)\nfor i in range(0, 10, 2):\n    print(i)  # Prints 0, 2, 4, 6, 8\n```\n\n## While Loops\n\nA `while` loop runs as long as a condition is true:\n\n```python\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1  # Don't forget to update!\n```\n\n⚠️ **Warning**: Always make sure a while loop will eventually end. An infinite loop will crash your program.\n\n## Break and Continue\n\n- `break` — exits the loop entirely\n- `continue` — skips to the next iteration\n\n```python\nfor i in range(10):\n    if i == 5:\n        break  # Stop at 5\n    if i % 2 == 0:\n        continue  # Skip even numbers\n    print(i)  # Prints 1, 3\n```\n\n## Key Takeaways\n\n- `if/elif/else` for conditional branching\n- `for` loops for iterating over sequences\n- `while` loops for condition-based repetition\n- `break` and `continue` for loop control\n- Always ensure while loops have an exit condition",
+          "minReadSeconds": 60
+        },
+        {
+          "id": "py-l7",
+          "type": "video",
+          "title": "Python Loops in Action",
+          "videoUrl": "https://www.youtube.com/watch?v=6iF8Xb7Z3wQ",
+          "minWatchPercent": 90
+        },
+        {
+          "id": "py-l8",
+          "type": "mcq",
+          "title": "Quick Check: Control Flow",
+          "question": "What does the `break` statement do inside a loop?",
+          "options": [
+            "Pauses the loop temporarily",
+            "Skips the current iteration and continues with the next",
+            "Exits the loop entirely",
+            "Restarts the loop from the beginning"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    }
+  ],
+  "exam": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "question": "Who created the Python programming language?",
+        "options": ["James Gosling", "Guido van Rossum", "Bjarne Stroustrup", "Dennis Ritchie"],
+        "correctIndex": 1
+      },
+      {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["func", "def", "function", "define"],
+        "correctIndex": 1
+      },
+      {
+        "question": "What is the output of: print(type(True))?",
+        "options": ["<class 'int'>", "<class 'str'>", "<class 'bool'>", "<class 'boolean'>"],
+        "correctIndex": 2
+      },
+      {
+        "question": "Which of these is a valid Python variable name?",
+        "options": ["2fast", "my-var", "class", "my_var"],
+        "correctIndex": 3
+      },
+      {
+        "question": "What does range(3) produce?",
+        "options": ["[1, 2, 3]", "[0, 1, 2]", "[0, 1, 2, 3]", "[3]"],
+        "correctIndex": 1
+      }
+    ]
+  }
+}
