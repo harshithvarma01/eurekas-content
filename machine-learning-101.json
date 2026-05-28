@@ -1,0 +1,10 @@
+{
+  "id": "machine-learning-101",
+  "title": "Machine Learning 101",
+  "description": "An introduction to ML algorithms and data.",
+  "thumbnail": "https://example.com/ml-thumbnail.jpg",
+  "category": "Data Science",
+  "level": "intermediate",
+  "duration": 5400,
+  "totalLessons": 8
+}
