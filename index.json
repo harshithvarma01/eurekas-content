@@ -19,6 +19,16 @@
       "level": "Beginner",
       "totalLessons": 7,
       "totalChapters": 3
+    },
+    {
+      "id": "machine-learning-101",
+      "title": "Machine Learning 101",
+      "description": "Your new course description here.",
+      "thumbnail": "https://picsum.photos/seed/ml/800/400",
+      "duration": "2 hours",
+      "level": "Beginner",
+      "totalLessons": 5,
+      "totalChapters": 1
     }
   ]
 }
